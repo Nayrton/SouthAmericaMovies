@@ -157,8 +157,7 @@
             </div>
             <div class="footer">
                 <p>
-		Descubra novos animes, e se divirta Assistindo! <br>
-		TopAnimeList1.0 © 2017. All rights reserved. Designed by <em>Nayrton Bertoldo.</em>
+		 SouthAmericaMovies © 2017. All rights reserved. Designed by <em>Nayrton Bertoldo.</em>
 		</p>
             </div>
         </main>
