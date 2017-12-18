@@ -15,7 +15,7 @@ header{
     height: 100px;
     background: linear-gradient(rgba(0,0,0,1) 80%,rgba(255,255,255,0.1))no-repeat;
     z-index: 2;
-       
+
 }
 header img{
     float: left;
@@ -34,7 +34,7 @@ header img{
     padding-top: 60px;
     color: white;
 }
-.login input[type=text], input[type=password] {
+.login input[type=text], input[type=password], input[type=email] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -49,6 +49,29 @@ header img{
     margin: 5% auto 15% auto; 
     border: 1px solid #000;
     width: 40%;
+}
+.regist{
+    display: none; 
+    position: fixed; 
+    z-index: 3; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;     
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+    color: white;
+}
+.regist input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: black;
 }
 .button {
     background-color: #eee;
@@ -68,9 +91,18 @@ header img{
     cursor: pointer;
     padding: 10px 18px;
     background-color:  #f44336;
-}.container {
+}
+.registbtn{    
+    width: auto;
+    border: none;
+    cursor: pointer;
+    padding: 10px 18px;
+    background-color:  #239b2e;
+}
+.container {
     padding: 16px;
 }
+/*formulario de pesquisa*/
 .formsearch{
     height: 30px;
     padding-left: 6px;
@@ -87,33 +119,39 @@ header img{
 }
 .fixo{    
     position: fixed;
-    
+
 }
+/*Header ul*/
 header ul{
     float: right;
-    padding: 20px 20px 20px 20px;
+    padding: 25px 20px 20px 20px;
 }
+header ul ul{
+    position: initial;
+    display:none;
+    box-shadow:3px 3px 2px #333;
+}
+header ul.submenu-1 li{
+    color: #000;    
+}
+header li:hover > ul.submenu-1{ display:block; padding:5px; width:200px; border-radius:0 0 5px 5px;   }
+header ul.submenu-1 a{  width:160px; padding:0 20px; border-radius:5px;  }
 
 header li{    
-    display: inline-block;	
+    display: inline-block;
+    background-color: #eee;
 }
 header li a{
     display: block;
     text-decoration: none;
-    color: #eee;
+    color: #000;
     padding: 5px 20px 7px 20px;
     font-size: 20px;	
-}
-header li:hover{
-    background-color: #eee;	
-}
-header li a:hover{
-    color: #000;
 }
 .principal{
     width: 100%;
     padding-top: 100px;
-    
+
 }
 .baners{
     width: 100%;
@@ -121,12 +159,12 @@ header li a:hover{
 }
 .baners a img{
     width: 100%;
-    height: 100%;
+    height: 410px;
 }
 .contentfilmes{
     width: 100%;
     height: 350px;
-    
+
 }
 .contentfilmestitulo{
     margin: 43px 0 20px 5px;
@@ -153,28 +191,62 @@ header li a:hover{
 }
 .banerfilme img{
     width: 100%;
+    height: 400px;
 }
 .clasifilme{
     position: relative;
     top: 0;
-   margin-left: 250px;
-   
+    margin-left: 250px;
+
 }
 .filmenameinfo{
-    
+
 }
 .imgfilmeinfo{
     position: absolute;
     top: 250px;
     left: 75px;
     z-index: 1;
-    overflow-x: hidden;
-    border: solid 5px white;
+    overflow-x: hidden;   
+}
+.imgfilmeinfo img{
+    border: solid 5px white; 
 }
 .filmesdados{
     background-color: #eee;
-    height: 2000px;
+    height: 710px;
 }
+.filmesdados h1{
+    padding-top: 90px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+.filmesdados h2{
+    margin-left: 50px;
+    margin-bottom: 7px;
+}
+.filmesdados p{
+    margin-left: 50px;
+    margin-bottom: 10px;
+    width: 630px;
+}
+.filmesdados iframe{
+    border: 1px #000 solid;
+    float: right;
+    margin-right: 30px;
+    margin-top: 40px;
+}
+.filmesgenerosh1{
+    color: #eee;
+    margin-top: 20px;
+    margin-left: 90px;
+}
+.filmesgeneros{    
+    margin:30px auto;
+    width: 87%;
+    height: 260px;       
+}
+
 /*Utilidade*/
 .radios{
     border-radius: 6px;	
@@ -186,7 +258,7 @@ header li a:hover{
 .teste{
     margin: auto;
     width: 92%;
-        
+
 }
 .teste img{
     width: 190px;

@@ -4,7 +4,11 @@
         $('.baners').slick({
             arrows:false,
             autoplay: true,
-            autoplaySpeed: 4000
+            autoplaySpeed: 4000,
+            pauseOnFocus:false,
+            dots:true
         });
     });
 })(document, window, jQuery);
+
+
