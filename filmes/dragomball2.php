@@ -1,16 +1,16 @@
+<?php
+    session_start();     
+
+?>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Generos</title>
-        <link href="css/stile.css" rel="stylesheet" type="text/css"/>
+        <title>DRAGON BALL Z - O RENASCIMENTO DE FREEZA</title>
+        <link href="../css/stile.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">        
     </head>
-    <body>
+    <body>        
         <main>
             <div class="login" id="log">                
                 <form class="logindisplay">                        
@@ -48,7 +48,7 @@ and open the template in the editor.
                 </form> 
             </div>
             <header class="fixo">
-                <a href="http://localhost/SouthAmericaMovies/index.php"><img src="imgs/SAM.png" width="100" height="100" alt="SAM"></a> 
+                <a href="http://localhost/SouthAmericaMovies/index.php"><img src="../imgs/SAM.png" width="100" height="100" alt="SAM"></a> 
                 <ul>                    
                     <li class="radios"><a href="#">Generos</a>
                         <ul class="submenu-1">
@@ -61,52 +61,63 @@ and open the template in the editor.
                     <li class="radios" style="background:none;">
                         <form class="formsearch" name="search" method="GET">
                             <input class="seachimput" type="search" name="search"  placeholder=" Pesquise Aqui!">
-                            <input class="imgsearch" type="image" alt="submit" src="imgs/search.png">
+                            <input class="imgsearch" type="image" alt="submit" src="../imgs/search.png">
                         </form>
                     </li>                    
                     <li class="radios">
-                        <form>
-                            <input class="testelog radios" type="button"  value="login" onclick="document.getElementById('log').style.display = 'block'">
+                        <form id="loginbtn">
+                            <input class="testelog radios" type="button"  value="login" onclick="document.getElementById('log').style.display = 'block'">                            
+                        </form>
+                        <form id="sairbtn" action="logout.php" style="display: none;">
+                            <input class="testelog radios" type="submit"  value="Sair" >
                         </form>
                     </li>
                 </ul>                          
             </header>
-            <div class="principal">
-                <h1 class="filmesgenerosh1"> Ação</h1>
+            <div class="filmesinfo">
+                <div class="banerfilme">
+                    <img src="../imgs/dragon.jpg" alt=""/>
 
-                <div class="filmesgeneros radios"  style="background: url('imgs/logan.jpg') no-repeat;background-size: 100% 100%;border: 2px #eee solid">
-                    <a href="filmes/thegamerule.php">
-                        <img src="imgs/img1(23).jpeg" alt="logan" style="margin-left: 25px;width:170px;height: 240px;border: 2px #eee solid; margin-top: 6px;"/>
-                    </a>
-                    <iframe width="400" height="220" src="https://www.youtube.com/embed/KPND6SgkN7Q" style="float: right; margin-right: 30px;margin-top:15px; ">Logan</iframe>   
 
+                    <div class="filmenameinfo">                        
+                    </div>
+                </div>
+                <div class="imgfilmeinfo">
+                    <img src="../imgs/img1(20).jpeg" alt=""/>
+                    <img style="border: none; margin-bottom: 90px; margin-left: 10px; width: 70px; height: 70px;"
+                         src="../imgs/10anos.png" width="85" height="85" alt="14anos"/>
+                </div>
+                <div class="filmesdados">
+                    <iframe width="520" height="310" src="https://www.youtube.com/embed/hUyrKGLKssU">teste</iframe>
+                    <h1>DRAGON BALL Z - O RENASCIMENTO DE FREEZA</h1>
+                    <h2>Generos</h2>
+                    <p>Animação, Ação, Aventura</p>
+                    <h2>Direção</h2>
+                    <p>Tadayoshi Yamamuro</p>
+                    <h2>Elenco</h2>
+                    <p>Masako Nozawa, Ryo Horikawa, Ryusei Nakao, Mayumi Tanaka, Hikaru Midorikawa, Takeshi Kusao, Masaharu Sato, Hiromi Tsuru, Yuko Minaguchi, Shigeru Chiba, Eiko Hisamura, Tessho Genda, Koichi Yamadera, Masakazu Morita, Toshio Furukawa, Miki Ito, Shoko Nakagawa, Kazuya Nakai, Shiro Saito</p>
+                    <h2>Siniopse</h2>
+                    <p> Sorbet e Tagoma, dois remanescentes do exército de Freeza, chegam à Terra em busca das Esferas do Dragão. A ideia é reuni-las para ressuscitar seu antigo líder, que faleceu após uma batalha contra Goku. O plano é bem-sucedido e, com isso, Freeza retorna disposto a se vingar. Para tanto ele se prepara durante meses, de forma que possa reencontrar Goku no auge do seu poder.</p>
+                    <h2>Data de Lançamento</h2>
+                    <p>18 de junho de 2015</p>
+                    <h2>Duração</h2>
+                    <p>1h 34min</p>
+                    <div>
+                        <form class="locarbtn" action="#" method="post">
+                            <input class="radios" type="submit" value="Locar" name="locarbtn"/>
+                        </form>
+                    </div>
                 </div>
 
-                <div class="filmesgeneros radios"  style="background: url('imgs/xxx.jpg') no-repeat;background-size: 100% 100%;border: 2px #eee solid">
-                    <img src="imgs/img1(29).jpeg" alt="logan" style="margin-left: 25px;width:170px;height: 240px;border: 2px #000 solid; margin-top: 6px;"/>
-                    <iframe width="400" height="220" src="https://www.youtube.com/embed/Kd2w8MeZBNA" style="float: right; margin-right: 30px;margin-top:15px; ">Logan</iframe>   
-
-                </div>
-                <div class="filmesgeneros radios"  style="background: url('imgs/logan.jpg') no-repeat;background-size: 100% 100%;border: 2px #eee solid">
-                    <img src="imgs/img1(23).jpeg" alt="logan" style="margin-left: 25px;width:170px;height: 240px;border: 2px #eee solid; margin-top: 6px;"/>
-                    <iframe width="400" height="220" src="https://www.youtube.com/embed/KPND6SgkN7Q" style="float: right; margin-right: 30px;margin-top:15px; ">Logan</iframe>   
-
-                </div>
-                <div class="filmesgeneros radios"  style="background: url('imgs/logan.jpg') no-repeat;background-size: 100% 100%;border: 2px #eee solid">
-                    <img src="imgs/img1(23).jpeg" alt="logan" style="margin-left: 25px;width:170px;height: 240px;border: 2px #eee solid; margin-top: 6px;"/>
-                    <iframe width="400" height="220" src="https://www.youtube.com/embed/KPND6SgkN7Q" style="float: right; margin-right: 30px;margin-top:15px; ">Logan</iframe>   
-
-                </div>
-                <div class="footer">
-                    <p>
-                        SouthAmericaMovies © 2017. All rights reserved. Designed by <em>Nayrton Bertoldo.</em>
-                    </p>
-                </div>
             </div>
-
+            <div class="footer">
+                <p>
+                    SouthAmericaMovies © 2017. All rights reserved. Designed by <em>Nayrton Bertoldo.</em>
+                </p>
+            </div>
         </main>
         <?php
-        // put your code here
+        
         ?>
     </body>
 </html>

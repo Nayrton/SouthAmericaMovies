@@ -1,9 +1,14 @@
+<?php
+    session_start();     
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>the game rule</title>
-        <link href="../css/stile.css" rel="stylesheet" type="text/css"/>        
+        <title>TRANSFORMERS: O ÚLTIMO CAVALEIRO</title>
+        <link href="../css/stile.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">        
     </head>
     <body>        
         <main>
@@ -60,44 +65,50 @@
                         </form>
                     </li>                    
                     <li class="radios">
-                        <form>
-                            <input class="testelog radios" type="button"  value="login" onclick="document.getElementById('log').style.display = 'block'">
+                        <form id="loginbtn">
+                            <input class="testelog radios" type="button"  value="login" onclick="document.getElementById('log').style.display = 'block'">                            
+                        </form>
+                        <form id="sairbtn" action="logout.php" style="display: none;">
+                            <input class="testelog radios" type="submit"  value="Sair" >
                         </form>
                     </li>
                 </ul>                          
             </header>
             <div class="filmesinfo">
                 <div class="banerfilme">
-                    <img src="../imgs/logan.jpg" alt=""/>
+                    <img src="../imgs/traflk.jpg" alt=""/>
 
 
                     <div class="filmenameinfo">                        
                     </div>
                 </div>
                 <div class="imgfilmeinfo">
-                    <img src="../imgs/img1(23).jpeg" alt=""/>
+                    <img src="../imgs/img1(7).jpeg" alt=""/>
                     <img style="border: none; margin-bottom: 90px; margin-left: 10px; width: 70px; height: 70px;"
-                         src="../imgs/14anos.png" width="85" height="85" alt="14anos"/>
+                         src="../imgs/12anos.png" width="85" height="85" alt="14anos"/>
                 </div>
                 <div class="filmesdados">
-                    <iframe width="520" height="310" src="https://www.youtube.com/embed/KPND6SgkN7Q">teste</iframe>
-                    <h1>Logan</h1>
+                    <iframe width="520" height="310" src="https://www.youtube.com/embed/qKlJFIx_NYI">teste</iframe>
+                    <h1>TRANSFORMERS: O ÚLTIMO CAVALEIRO</h1>
                     <h2>Generos</h2>
-                    <p>Ação, Ficção científica, Aventura</p>
+                    <p>Ação, Ficção científica</p>
                     <h2>Direção</h2>
-                    <p>James Mangold</p>
+                    <p>Michael Bay</p>
                     <h2>Elenco</h2>
-                    <p>Hugh Jackman, Patrick Stewart, Richard E. Grant, Boyd Holbrook, Stephen Merchant, Dafne Keen</p>
+                    <p>Mark Wahlberg, Stanley Tucci, Isabela Moner, Josh Duhamel, Tyrese Gibson, John Turturro, Laura Haddock, Anthony Hopkins, Santiago Cabrera, Liam Garrigan, Jerrod Carmichael, Mitch Pileggi</p>
                     <h2>Siniopse</h2>
-                    <p> Em 2029, Logan (Hugh Jackman) ganha a vida como chofer de limousine para cuidar do nonagenário Charles Xavier (Patrick Stewart). Debilitado fisicamente e esgotado emocionalmente, ele é procurado por Gabriela (Elizabeth Rodriguez), uma mexicana que precisa da ajuda do ex-X-Men para defender a pequena Laura Kinney / X-23 (Dafne Keen). Ao mesmo tempo em que se recusa a voltar à ativa, Logan é perseguido pelo mercenário Donald Pierce (Boyd Holbrook), interessado na menina.</p>
+                    <p> Os humanos estão em guerra com os Transformers, que precisam se esconder na medida do possível. Cade Yeager (Mark Wahlberg) é um de seus protetores, liderando um núcleo de resistência situado em um ferro-velho. É lá que conhece Izabella (Isabela Moner), uma garota de 15 anos que luta para proteger um pequeno robô defeituoso. Paralelamente, Optimus Prime viaja pelo universo rumo a Cybertron, seu planeta-natal, de forma a entender o porquê dele ter sido destruído. Só que, na Terra, Megatron se prepara para um novo retorno, mais uma vez disposto a tornar os Decepticons os novos soberanos do planeta.</p>
                     <h2>Data de Lançamento</h2>
-                    <p>2 de março de 2017</p>
+                    <p>20 de julho de 2017</p>
                     <h2>Duração</h2>
-                    <p>2h 17min</p>
+                    <p>2h 29min</p>
+                    <div>
+                        <form class="locarbtn" action="#" method="post">
+                            <input class="radios" type="submit" value="Locar" name="locarbtn"/>
+                        </form>
+                    </div>
                 </div>
-                <div class="locarbtn">
-                    
-                </div>
+
             </div>
             <div class="footer">
                 <p>
@@ -106,7 +117,7 @@
             </div>
         </main>
         <?php
-        // put your code here
+        
         ?>
     </body>
 </html>

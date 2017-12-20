@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <title>Usuario</title>
         <link href="css/stile.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     </head>
     <body>
 

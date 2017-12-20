@@ -1,7 +1,7 @@
 *{
     margin: 0 ;
     padding: 0;    
-    font-family: 'Ropa Sans', serif;      
+    font-family: 'Open Sans', sans-serif;      
 }
 body{
     width: 100%;
@@ -146,7 +146,7 @@ header li a{
     text-decoration: none;
     color: #000;
     padding: 5px 20px 7px 20px;
-    font-size: 20px;	
+    font-size: 18px;	
 }
 .principal{
     width: 100%;
@@ -199,9 +199,6 @@ header li a{
     margin-left: 250px;
 
 }
-.filmenameinfo{
-
-}
 .imgfilmeinfo{
     position: absolute;
     top: 250px;
@@ -210,11 +207,12 @@ header li a{
     overflow-x: hidden;   
 }
 .imgfilmeinfo img{
-    border: solid 5px white; 
+    border: solid 5px white;
+    width: 220px;
+    height: 326px;
 }
-.filmesdados{
-    background-color: #eee;
-    height: 710px;
+.filmesdados{    
+    background-color: #eee;    
 }
 .filmesdados h1{
     padding-top: 90px;
@@ -245,6 +243,19 @@ header li a{
     margin:30px auto;
     width: 87%;
     height: 260px;       
+}
+.locarbtn input{   
+    margin-left: 46%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    background-color: #a721ab;
+    color: #fff;
+    padding: 14px 20px;    
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    font-size: 18px;
+    
 }
 
 /*Utilidade*/
