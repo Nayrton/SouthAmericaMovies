@@ -13,15 +13,15 @@
     <body>        
         <main>
             <div class="login" id="log">                
-                <form class="logindisplay">                        
+                <form class="logindisplay" method="post" action="login.php" >                        
                     <div class="container">
                         <label><b>Email</b></label>
-                        <input type="email" placeholder="Enter Email" id="email" required>
+                        <input type="email" placeholder="Enter Email"  name="Email" required>
 
                         <label><b>Senha</b></label>
-                        <input type="password" placeholder="Enter Password" id="psw" required>
+                        <input type="password" placeholder="Enter Password"  name="Psw" required>
 
-                        <button class="button" type="submit" id="log_btn">Login</button>                            
+                        <button class="button" type="submit" id="log_btn" >Login</button>                            
                     </div>
 
                     <div class="container" style="background-color:#555">
@@ -32,16 +32,19 @@
                 </form>                              
             </div>
             <div class="regist" id="reg">
-                <form class="logindisplay">
+                <form class="logindisplay" method="post" action="register.php">
                     <div class="container">
                         <label><b>Usuário</b></label>
-                        <input type="text" placeholder="Digitar Username" id="reg_uname" required>
+                        <input type="text" placeholder="Digitar Username" name="reg_uname" required>
                         <label><b>Email</b></label>
-                        <input type="email" placeholder="Digitar Email" id="reg_email" required>
-
+                        <input type="email" placeholder="Digitar Email" name="reg_email" required>
+                        <label><b>CPF</b></label>
+                        <input type="text" placeholder="Digitar CPF" name="reg_cpf" required>
+                        <label><b>Endereço</b></label>
+                        <input type="text" placeholder="Digitar Endereço" name="reg_end" required>
                         <label><b>Senha</b></label>
-                        <input type="password" placeholder="Digitar Password" id="reg_psw" required>
-                        <input type="password" placeholder="Repetir Password" id="reg_psw_rep" required>
+                        <input type="password" placeholder="Digitar Password" name="reg_psw" required>
+                        <input type="password" placeholder="Repetir Password" name="reg_psw_rep" required>
 
                         <button class="button" type="submit" id="reg_btn">Registrar</button>
                     </div>
@@ -52,10 +55,10 @@
                 <ul>                    
                     <li class="radios"><a href="#">Generos</a>
                         <ul class="submenu-1">
-                            <li><a href="generos.php" >Ação</a></li>
-                            <li><a href="#" >Terror</a></li>
-                            <li><a href="#" >Animação</a></li>
-                            <li><a href="#" >Ficção Cientifica</a></li>
+                            <li><a href="acao.php" >Ação</a></li>
+                            <li><a href="terror.php" >Terror</a></li>
+                            <li><a href="animacao.php" >Animação</a></li>
+                            <li><a href="ficcaocientifica.php" >Ficção Cientifica</a></li>
                         </ul>
                     </li>                    
                     <li class="radios" style="background:none;">

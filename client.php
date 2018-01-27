@@ -1,3 +1,12 @@
+<?php
+require 'conect.php';
+session_start();
+$session = mysqli_query($conect, "SELECT * FROM locadora.cliente WHERE email = '$_SESSION[Email]'");
+$info = mysqli_fetch_assoc($session);
+$join = mysqli_query($conect,"SELECT filme.nome,locar.data_locacao,locar.data_devolucao FROM ((locar INNER JOIN filme ON locar.id_filme = filme.id_filme)INNER JOIN cliente ON locar.id_cliente = '{$info['id_cliente']}')");
+$infofilmes = mysqli_fetch_assoc($join);
+
+?>
 <!DOCTYPE html>
 
 <html>
@@ -13,12 +22,12 @@
             <header class="fixo">
                 <a href="http://localhost/SouthAmericaMovies/index.php"><img src="imgs/SAM.png" width="100" height="100" alt="SAM"></a> 
                 <ul>                    
-                    <li class="radios"><a href="#">Generos</a>
+                    <li class="radios"><a>Generos</a>
                         <ul class="submenu-1">
-                            <li><a href="generos.php" >Ação</a></li>
-                            <li><a href="#" >Terror</a></li>
-                            <li><a href="#" >Animação</a></li>
-                            <li><a href="#" >Ficção Cientifica</a></li>
+                            <li><a href="acao.php" >Ação</a></li>
+                            <li><a href="terror.php" >Terror</a></li>
+                            <li><a href="animacao.php" >Animação</a></li>
+                            <li><a href="ficcaocientifica.php" >Ficção Cientifica</a></li>
                         </ul>
                     </li>                    
                     <li class="radios" style="background:none;">
@@ -35,21 +44,53 @@
                 </ul>                          
             </header>
             <div class="principal">
+                <div class="expand">
+                    <div class="userblock radios">
+                        <img src="imgs/usuario.png" alt="user"/>
+                        <h2><?= $info["nome"]; ?></h2>
+                    </div>
+                    <div class="locaçãoblock radios">
+                        <h3>Informações:</h3>
+                        <p>A tabela abaixo informa as locações realidazas, com um maximo de 3 locações, informa tambem as datas se locação e de devolução dos filmes.</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Filme</th>
+                                    <th>Data-de-locação</th>
+                                    <th>Data-de-devolição</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><?= $infofilmes["nome"]?></td>
+                                    <td><?= $infofilmes["data_locacao"]?></td>
+                                    <td><?= $infofilmes["data_devolucao"]?></td>
+                                </tr>
+                                <tr>
+                                    <td><?= $infofilmes["nome"]?></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><?= $infofilmes["nome"]?></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                <div>
-                    <h1></h1>
+
+
+                    </div>
+
                 </div>
             </div>
             <div class="footer">
-                <p>
-                    SouthAmericaMovies © 2017. All rights reserved. Designed by <em>Nayrton Bertoldo.</em>
-                </p>
+                <p>SouthAmericaMovies © 2017. All rights reserved. Designed by <em>Nayrton Bertoldo.</em></p>
             </div>
+
         </main>
         <?php
-        
-        
-        
         ?>
     </body>
 </html>
