@@ -193,7 +193,11 @@ CREATE TABLE `filme` (
 INSERT INTO `filme` (`valor`, `duracao`, `resumo`, `nome`, `id_filme`, `data_lancamento`) VALUES
 (65, '01:56:00', 'Callum Lynch (Michael Fassbender) descobre que é descendente de um membro da Ordem dos Assassinos e, via memória genética, revive as aventuras do guerreiro Aguilar, seu ancestral espanhol do século XV. Dotado de novos conhecimentos e incríveis habili', 'Assassin\'s creed', 1, '2017-01-12'),
 (55, '01:47:00', 'Xander Cage (Vin Diesel) desiste de sua aposentadoria quando Xiang, um guerreiro alfa mortal, coloca suas mãos em uma arma indestrutível chamada de \"Caixa de Pandora\". Xander recruta os melhores soldados do mundo para destruir o vilão e paralelamente', 'XXX: REATIVADO', 2, '2017-01-19'),
+<<<<<<< HEAD
 (50, '01:46:00', 'Sobrevivente do massacre zumbi, Alice (Milla Jovovich) retorna para onde o pesadelo começou, Raccoon City, onde a Umbrella Corporation reúne suas forças para um ataque final contra os remanescentes do apocalipse. Para vencer a dura batalha final e sa', 'RESIDENT EVIL 6: O CAPÍTULO FINAL', 3, '2017-01-26');
+=======
+(50, '01:46:00', 'Sobrevivente do massacre zumbi, Alice (Milla Jovovich) retorna para onde o pesadelo começou, Raccoon City, onde a Umbrella Corporation reúne suas forças para um ataque final contra os remanescentes do apocalipse. Para vencer a dura batalha final e sa', 'RESIDENT EVIL 6: O CAPITULO FINAL', 3, '2017-01-26');
+>>>>>>> aad3958b019c196a13d1ce27902efb867b873717
 (50, '01:46:00', '', 'Logan', '');
 (50, '01:46:00', '', 'A Vigilante do Amanha:Ghost in the Shell', '');
 (50, '01:46:00', '', 'Velozes e Furiosos 8', '');
@@ -221,6 +225,10 @@ INSERT INTO `filme` (`valor`, `duracao`, `resumo`, `nome`, `id_filme`, `data_lan
 (50, '01:46:00', '', 'BATMAN VS SUPERMAN - A ORIGEM DA JUSTIÇA', '');
 (50, '01:46:00', '', 'WARCRAFT - O PRIMEIRO ENCONTRO DE DOIS MUNDOS', '');
 (50, '01:46:00', '', 'CAPITAO AMERICA: GUERRA CIVIL', '');
+<<<<<<< HEAD
+=======
+
+>>>>>>> aad3958b019c196a13d1ce27902efb867b873717
 -- --------------------------------------------------------
 
 --
