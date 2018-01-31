@@ -57,7 +57,7 @@
                             <li><a href="ficcaocientifica.php" >Ficção Cientifica</a></li>
                         </ul>
                     </li>                    
-                    <li class="radios" style="background:none;">
+                    <li class="radios hide" style="background:none;">
                         <form class="formsearch" name="search" method="GET">
                             <input class="seachimput" type="search" name="search"  placeholder=" Pesquise Aqui!">
                             <input class="imgsearch" type="image" alt="submit" src="imgs/search.png">

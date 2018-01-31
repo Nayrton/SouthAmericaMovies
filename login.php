@@ -17,7 +17,7 @@ if($row > 0){
 		    header("Location: client.php");
 	}
 	else{
-		header("Location: index.php?erro=1");
+		header("Location: index.php");
 	}
 
 

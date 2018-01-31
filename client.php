@@ -4,7 +4,8 @@ session_start();
 $session = mysqli_query($conect, "SELECT * FROM locadora.cliente WHERE email = '$_SESSION[Email]'");
 $info = mysqli_fetch_assoc($session);
 $join = mysqli_query($conect,"SELECT filme.nome,locar.data_locacao,locar.data_devolucao FROM ((locar INNER JOIN filme ON locar.id_filme = filme.id_filme)INNER JOIN cliente ON locar.id_cliente = '{$info['id_cliente']}')");
-$infofilmes = mysqli_fetch_assoc($join);
+$infofilmes = mysqli_fetch_all($join);
+var_dump($infofilmes);
 
 ?>
 <!DOCTYPE html>
@@ -30,7 +31,7 @@ $infofilmes = mysqli_fetch_assoc($join);
                             <li><a href="ficcaocientifica.php" >Ficção Cientifica</a></li>
                         </ul>
                     </li>                    
-                    <li class="radios" style="background:none;">
+                    <li class="radios hide" style="background:none;">
                         <form class="formsearch" name="search" method="GET">
                             <input class="seachimput" type="search" name="search"  placeholder=" Pesquise Aqui!">
                             <input class="imgsearch" type="image" alt="submit" src="imgs/search.png">
@@ -51,7 +52,7 @@ $infofilmes = mysqli_fetch_assoc($join);
                     </div>
                     <div class="locaçãoblock radios">
                         <h3>Informações:</h3>
-                        <p>A tabela abaixo informa as locações realidazas, com um maximo de 3 locações, informa tambem as datas se locação e de devolução dos filmes.</p>
+                        <p>A tabela abaixo informa as locações realizadas, com um máximo de 3 locações, informa também as datas se locação e de devolução dos filmes.</p>
                         <table>
                             <thead>
                                 <tr>
@@ -62,19 +63,19 @@ $infofilmes = mysqli_fetch_assoc($join);
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><?= $infofilmes["nome"]?></td>
-                                    <td><?= $infofilmes["data_locacao"]?></td>
-                                    <td><?= $infofilmes["data_devolucao"]?></td>
+                                    <td><?= @$infofilmes[0][0]?></td>
+                                    <td><?= @$infofilmes[0][1]?></td>
+                                    <td><?= @$infofilmes[0][2]?></td>
                                 </tr>
                                 <tr>
-                                    <td><?= $infofilmes["nome"]?></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td><?= @$infofilmes[1][0]?></td>
+                                    <td><?= @$infofilmes[1][1]?></td>
+                                    <td><?= @$infofilmes[1][2]?></td>
                                 </tr>
                                 <tr>
-                                    <td><?= $infofilmes["nome"]?></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td><?= @$infofilmes[2][0]?></td>
+                                    <td><?= @$infofilmes[2][1]?></td>
+                                    <td><?= @$infofilmes[2][2]?></td>
                                 </tr>
                             </tbody>
                         </table>

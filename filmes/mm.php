@@ -13,7 +13,7 @@
     <body>        
         <main>
             <div class="login" id="log">                
-                <form class="logindisplay" method="post" action="login.php" >                        
+                <form class="logindisplay" method="post" action="../login.php" >                        
                     <div class="container">
                         <label><b>Email</b></label>
                         <input type="email" placeholder="Enter Email"  name="Email" required>
@@ -32,7 +32,7 @@
                 </form>                              
             </div>
             <div class="regist" id="reg">
-                <form class="logindisplay" method="post" action="register.php">
+                <form class="logindisplay" method="post" action="../register.php">
                     <div class="container">
                         <label><b>Usuário</b></label>
                         <input type="text" placeholder="Digitar Username" name="reg_uname" required>
@@ -55,13 +55,13 @@
                 <ul>                    
                     <li class="radios"><a href="#">Generos</a>
                         <ul class="submenu-1">
-                            <li><a href="generos.php" >Ação</a></li>
-                            <li><a href="#" >Terror</a></li>
-                            <li><a href="#" >Animação</a></li>
-                            <li><a href="#" >Ficção Cientifica</a></li>
+                            <li><a href="../acao.php" >Ação</a></li>
+                            <li><a href="../terror.php" >Terror</a></li>
+                            <li><a href="../animacao.php" >Animação</a></li>
+                            <li><a href="../ficcaocientifica.php" >Ficção Cientifica</a></li>
                         </ul>
                     </li>                    
-                    <li class="radios" style="background:none;">
+                    <li class="radios hide" style="background:none;">
                         <form class="formsearch" name="search" method="GET">
                             <input class="seachimput" type="search" name="search"  placeholder=" Pesquise Aqui!">
                             <input class="imgsearch" type="image" alt="submit" src="../imgs/search.png">
@@ -106,7 +106,8 @@
                     <h2>Duração</h2>
                     <p>2h 21min</p>
                     <div>
-                        <form class="locarbtn" action="#" method="post">
+                        <form class="locarbtn" action="../locar.php" method="get">
+                            <input type="hidden" value='10' name="n"/>
                             <input class="radios" type="submit" value="Locar" name="locarbtn"/>
                         </form>
                     </div>

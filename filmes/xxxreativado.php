@@ -1,19 +1,4 @@
 <?php
-    require '../conect.php';
-    session_start();
-    $id_filme = 2;
-    @$session = mysqli_query($conect, "SELECT * FROM locadora.cliente WHERE email = '$_SESSION[Email]'");
-    $info = mysqli_fetch_assoc($session);
-    $sairbt = "none";
-    $loginbt = "block";     
-    if($session = null){
-        $sairbt = "block";
-        $loginbt = "none";
-    }else{
-        
-        
-    };
-        
 
 ?>
 <!DOCTYPE html>
@@ -46,7 +31,7 @@
                 </form>                              
             </div>
             <div class="regist" id="reg">
-                <form class="logindisplay" method="post" action="register.php">
+                <form class="logindisplay" method="post" action="../register.php">
                     <div class="container">
                         <label><b>Usuário</b></label>
                         <input type="text" placeholder="Digitar Username" name="reg_uname" required>
@@ -69,23 +54,23 @@
                 <ul>                    
                     <li class="radios"><a href="#">Generos</a>
                         <ul class="submenu-1">
-                            <li><a href="generos.php" >Ação</a></li>
-                            <li><a href="#" >Terror</a></li>
-                            <li><a href="#" >Animação</a></li>
-                            <li><a href="#" >Ficção Cientifica</a></li>
+                            <li><a href="../acao.php" >Ação</a></li>
+                            <li><a href="../terror.php" >Terror</a></li>
+                            <li><a href="../animacao.php" >Animação</a></li>
+                            <li><a href="../ficcaocientifica.php" >Ficção Cientifica</a></li>
                         </ul>
                     </li>                    
-                    <li class="radios" style="background:none;">
+                    <li class="radios hide" style="background:none; ">
                         <form class="formsearch" name="search" method="GET">
                             <input class="seachimput" type="search" name="search"  placeholder=" Pesquise Aqui!">
                             <input class="imgsearch" type="image" alt="submit" src="../imgs/search.png">
                         </form>
                     </li>                    
                     <li class="radios">
-                        <form id="loginbtn" style="display: <?php echo $loginbt; ?>;">
+                        <form id="loginbtn" style="display:block;">
                             <input class="testelog radios" type="button"  value="login" onclick="document.getElementById('log').style.display = 'block'">                            
                         </form>
-                        <form id="sairbtn" action="../logout.php" style="display: <?php echo $sairbt; ?>;">
+                        <form id="sairbtn" action="../logout.php" style="display:none;">
                             <input class="testelog radios" type="submit"  value="Sair" >
                         </form>
                     </li>
@@ -120,7 +105,8 @@
                     <h2>Duração</h2>
                     <p>1h 47min</p>
                     <div>
-                        <form class="locarbtn" action="../locar.php" method="post">
+                        <form class="locarbtn" action="../locar.php" method="get">
+                            <input type="hidden" value='2' name="n"/>
                             <input class="radios" type="submit" value="Locar" name="locarbtn"/>
                         </form>
                     </div>

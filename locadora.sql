@@ -194,7 +194,33 @@ INSERT INTO `filme` (`valor`, `duracao`, `resumo`, `nome`, `id_filme`, `data_lan
 (65, '01:56:00', 'Callum Lynch (Michael Fassbender) descobre que é descendente de um membro da Ordem dos Assassinos e, via memória genética, revive as aventuras do guerreiro Aguilar, seu ancestral espanhol do século XV. Dotado de novos conhecimentos e incríveis habili', 'Assassin\'s creed', 1, '2017-01-12'),
 (55, '01:47:00', 'Xander Cage (Vin Diesel) desiste de sua aposentadoria quando Xiang, um guerreiro alfa mortal, coloca suas mãos em uma arma indestrutível chamada de \"Caixa de Pandora\". Xander recruta os melhores soldados do mundo para destruir o vilão e paralelamente', 'XXX: REATIVADO', 2, '2017-01-19'),
 (50, '01:46:00', 'Sobrevivente do massacre zumbi, Alice (Milla Jovovich) retorna para onde o pesadelo começou, Raccoon City, onde a Umbrella Corporation reúne suas forças para um ataque final contra os remanescentes do apocalipse. Para vencer a dura batalha final e sa', 'RESIDENT EVIL 6: O CAPÍTULO FINAL', 3, '2017-01-26');
-
+(50, '01:46:00', '', 'Logan', '');
+(50, '01:46:00', '', 'A Vigilante do Amanha:Ghost in the Shell', '');
+(50, '01:46:00', '', 'Velozes e Furiosos 8', '');
+(50, '01:46:00', '', 'Guardioes da Galaxia 2', '');
+(50, '01:46:00', '', 'ALIEN: COVENANT', '');
+(50, '01:46:00', '', 'Piratas do Caribe: A Vingança de Salazar', '');
+(50, '01:46:00', '', 'Mulher-Maravilha', '');
+(50, '01:46:00', '', 'A Mumia', '');
+(50, '01:46:00', '', 'Meu Malvado Favorito 3', '');
+(50, '01:46:00', '', 'Spider-Man: De Volta ao Lar', '');
+(50, '01:46:00', '', 'Planeta dos Macacos: A Guerra', '');
+(50, '01:46:00', '', 'Carros 3', '');
+(50, '01:46:00', '', 'TRANSFORMERS: O ULTIMO CAVALEIRO', '');
+(50, '01:46:00', '', 'Thor 3: Ragnarok', '');
+(50, '01:46:00', '', 'Liga da Justiça', '');
+(50, '01:46:00', '', 'STAR WARS - OS ULTIMOS JEDI', '');
+(50, '01:46:00', '', 'Cinquenta Tons Mais Escuros', '');
+(50, '01:46:00', '', 'DRAGON BALL Z: A BATALHA DOS DEUSES', '');
+(50, '01:46:00', '', 'DRAGON BALL Z - O RENASCIMENTO DE FREEZA', '');
+(50, '01:46:00', '', 'THE LAST - NARUTO O FILME', '');
+(50, '01:46:00', '', 'ONE PIECE - STRONG WORLD', '');
+(50, '01:46:00', '', 'Yu-Gi-Oh! The Movie: Pyramid of Light', '');
+(50, '01:46:00', '', 'Yu-Gi-Oh!: The Dark Side of Dimensions', '');
+(50, '01:46:00', '', 'ANJOS DA NOITE - GUERRAS DE SANGUE', '');
+(50, '01:46:00', '', 'BATMAN VS SUPERMAN - A ORIGEM DA JUSTIÇA', '');
+(50, '01:46:00', '', 'WARCRAFT - O PRIMEIRO ENCONTRO DE DOIS MUNDOS', '');
+(50, '01:46:00', '', 'CAPITAO AMERICA: GUERRA CIVIL', '');
 -- --------------------------------------------------------
 
 --
