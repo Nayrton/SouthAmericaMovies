@@ -5,7 +5,7 @@ $session = mysqli_query($conect, "SELECT * FROM locadora.cliente WHERE email = '
 $info = mysqli_fetch_assoc($session);
 $join = mysqli_query($conect,"SELECT filme.nome,locar.data_locacao,locar.data_devolucao FROM ((locar INNER JOIN filme ON locar.id_filme = filme.id_filme)INNER JOIN cliente ON locar.id_cliente = '{$info['id_cliente']}')");
 $infofilmes = mysqli_fetch_all($join);
-var_dump($infofilmes);
+
 
 ?>
 <!DOCTYPE html>
@@ -68,14 +68,14 @@ var_dump($infofilmes);
                                     <td><?= @$infofilmes[0][2]?></td>
                                 </tr>
                                 <tr>
-                                    <td><?= @$infofilmes[1][0]?></td>
-                                    <td><?= @$infofilmes[1][1]?></td>
-                                    <td><?= @$infofilmes[1][2]?></td>
-                                </tr>
-                                <tr>
                                     <td><?= @$infofilmes[2][0]?></td>
                                     <td><?= @$infofilmes[2][1]?></td>
                                     <td><?= @$infofilmes[2][2]?></td>
+                                </tr>
+                                <tr>
+                                    <td><?= @$infofilmes[4][0]?></td>
+                                    <td><?= @$infofilmes[4][1]?></td>
+                                    <td><?= @$infofilmes[4][2]?></td>
                                 </tr>
                             </tbody>
                         </table>
